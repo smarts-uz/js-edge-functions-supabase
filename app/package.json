@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.33.1",
+    "esm.sh": "^0.0.6",
+    "openai": "^4.6.0"
+  },
+  "devDependencies": {
+    "supabase": "^1.93.0"
+  }
+}

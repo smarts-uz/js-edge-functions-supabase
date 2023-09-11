@@ -31,16 +31,13 @@ serve( async () => {
       detectSessionInUrl: true
     },
     global: {
-      headers: { 'x-my-custom-header': 'my-app-name' },
+      headers: { 'x-my-custom-header': 'my-app-name', Authorization: `BearerOQs+xtVTTfGAdzN9SQtrGggFcXSpYRXt87qHjKrFr4M7YcQvto1TI+EourVUcgylkCYx9i+Ya2D+LnNGjsDZzw==` },
     },
   }
 
-  const supabase = createClient('https://trcosyjdikazobtueqby.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRyY29zeWpkaWthem9idHVlcWJ5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5MzQ5MDkxMiwiZXhwIjoyMDA5MDY2OTEyfQ.uwObMMYFFM0NWIrTxN1YE1_HCcpT5JpaHCCgW2gqjqA', {
-    headers: {
-      apiKey: anonKey,
-      Authorization: `BearerOQs+xtVTTfGAdzN9SQtrGggFcXSpYRXt87qHjKrFr4M7YcQvto1TI+EourVUcgylkCYx9i+Ya2D+LnNGjsDZzw==`
-    }
-  })
+  const supabase = createClient('https://trcosyjdikazobtueqby.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRyY29zeWpkaWthem9idHVlcWJ5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5MzQ5MDkxMiwiZXhwIjoyMDA5MDY2OTEyfQ.uwObMMYFFM0NWIrTxN1YE1_HCcpT5JpaHCCgW2gqjqA', options
+
+  )
   const { data, error } = await supabase
       .from('posts')
       .select('*')
